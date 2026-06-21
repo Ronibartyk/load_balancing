@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: base_service_route
+          # TODO: Route traffic using the built-in Load Balancer protocol (Hint: lb://)
+          uri:
+          predicates:
+            # TODO: Match all incoming requests that start with /api/
+            - Path=
+
+# Static registry for clustering without a service discovery server (like Eureka)
+spring.cloud.discovery.client.simple.instances:
+  BASE-SERVICE:
+    # TODO: Collect your team members' IPs (using 'hostname -I') and list them below
+    - uri: http://localhost:8081
+    ##
