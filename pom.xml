@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>3.5.0-M1</version>
         <relativePath/>
     </parent>
     <groupId>com.example</groupId>
@@ -15,9 +15,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>base_service</module>
-        <module>load_balancer</module>
-        <module>consumer_service</module>
         <module>base_service</module>
         <module>load_balancer</module>
         <module>consumer_service</module>
@@ -39,4 +36,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
