@@ -16,9 +16,9 @@ public class BaseController {
     // TODO: Map this method to handle GET requests at "/api/hello"
     ##
     public Map<String, String> sayHello() {
-        return Map.of(
-                "message", "Hello World!",
-                "source", ## // TODO: Return the injected serviceIdentity here
-        );
+        Map<String, String> response = new LinkedHashMap<>();
+        response.put("message", "Hello World!");
+        response.put("source", ##); // TODO: Return the injected serviceIdentity here
+        return response;
     }
 }
